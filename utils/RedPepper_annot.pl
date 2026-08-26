@@ -97,26 +97,16 @@ my $kegglist="$datadir/keggfun2.txt";
 opendir(indir,$aadir) || die "Cannot open inpout files directory $aadir\n";
 my @seqfiles=grep(/\.fa$|\.fa.gz$/,readdir indir);
 closedir(indir);
-my $samplesfile="samples.tsv";
-open(out,">$samplesfile") || die;
-foreach my $ofile(sort @seqfiles) { 
-	my $fname=$ofile;
-	$fname=~s/\.fa.*//;
-	print out "$fname\t$ofile\tgenome\n";
-	}
-close out;
+
 
 my(%files,%type);
 tie %files,"Tie::IxHash";
 open(in,$samplesfile) || die; 
 my $tempsample="temp.samples";  #-- We need a samples file to trick SqueezeMeta
-my $anum;
-while(-e $tempsample) { 	#-- For preventing overwriting an already existing "temp.samples" file (happened already)
-	$anum++;
-	$tempsample="temp.samples.$anum";
-	}
+if(-e $tempsample) { system("rm $tempsample"); }
+
 open(out,">$tempsample") || die;
-while(<in>) {
+while(<in>) { 
 	chomp;
 	my @e=split(/\t/,$_);
 	$files{$e[0]}=$e[1];
@@ -132,6 +122,7 @@ if($opt_db) { $edb="-extdb $opt_db"; }
 print "\nNow I will call SqueezeMeta to do my stuff. Please hold on.\n\n";
 $numthreads=60;
 my $command="perl $scriptdir/SqueezeMeta.pl  -s $tempsample -f $aadir -m sequential $edb $blockoption -t $numthreads -fastnr  -c 0 --empty";
+print "$command\n";
 if($nocog) { $command.=" --nocog"; }
 if($nokegg) { $command.=" --nokegg"; }
 if($nopfam) { $command.=" --nopfam"; }
