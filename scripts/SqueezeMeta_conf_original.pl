@@ -108,6 +108,7 @@ $cleaning_method    = "trimmomatic";
 $cleaning_options   = "";
 $mapper             = "bowtie";
 $binners            = "metabat2,concoct";
+$diamond_temp_dir   = "";
 $diamond_nr_options = "";
 $mapping_options    = "";
 
@@ -116,7 +117,7 @@ $mapping_options    = "";
 
 $metabat_soft       = "metabat2";
 $jgi_summ_soft      = "jgi_summarize_bam_contig_depths";
-$maxbin_soft        = "$installpath/bin/MaxBin/run_MaxBin.pl";
+$maxbin_soft        = "perl $installpath/bin/MaxBin/run_MaxBin.pl";
 $concoct_dir        = "$installpath/bin/CONCOCT-1.1.0";
 $spades_soft        = "spades.py";
 $barrnap_soft       = "$installpath/bin/barrnap";
@@ -135,7 +136,7 @@ $cdhit_soft         = "$installpath/bin/cd-hit-est";
 $toamos_soft        = "$installpath/bin/AMOS/toAmos";
 $minimus2_soft      = "$installpath/bin/AMOS/minimus2";
 $checkm_soft        = "PATH=$installpath/bin:$installpath/bin/pplacer:$installpath/bin/hmmer:\$PATH $installpath/bin/checkm";
-$checkm2_soft       = "checkm2";
+$checkm2_soft       = "$installpath/bin/checkm2";
 $minpath_soft       = "python3 $installpath/bin/MinPath1.4.py";
 $canu_soft          = "$installpath/bin/canu-2.2/bin/canu";
 $flye_soft          = "flye";

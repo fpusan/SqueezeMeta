@@ -133,6 +133,9 @@ Annotation
 [–D|–-doublepas]
     Run BlastX ORF prediction in addition to Prodigal. See :ref:`Extra sensitive ORFs`
 
+[-diamond_temp_dir <string>]
+    Directory to be used for temporary storage in all DIAMOND runs
+
 [-diamond_nr_options <string>]
     Extra options to be passed when calling DIAMOND against the nr database.
     Please provide all the extra options as a single quoted string
@@ -148,6 +151,11 @@ Mapping
     Extra options for the mapper (refer to the manual of the specific mapper).
     Please provide all the extra options as a single quoted string
     (e.g. ``-mapping_options "–opt1 foo –opt2 bar"``)
+
+[--map95]
+   Use a 95% identity cutoff for mapping short reads to the reference.
+   Equivalent to ``-map bowtie -mapping_options "--ignore-quals --mp 1,1 --np 1 --rdg 0,1 --rfg 0,1 --score-min L,0,-0.05"``.
+   Overrides ``-map`` and ``-mapping_options``
 
 Binning
 -------

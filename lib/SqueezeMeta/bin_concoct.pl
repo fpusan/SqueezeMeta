@@ -6,6 +6,7 @@
 use strict;
 use Cwd;
 use lib ".";
+use Getopt::Long;
 
 $|=1;
 
@@ -25,7 +26,7 @@ else
 our $installpath = abs_path("$sqmlibdir/../..");
 
 my $pwd=cwd();
-my $projectpath=$ARGV[0];
+my $projectpath=shift @ARGV;
 if(!$projectpath) { die "Please provide a valid project name or project path\n"; }
 if(-s "$projectpath/SqueezeMeta_conf.pl" <= 1) { die "Can't find SqueezeMeta_conf.pl in $projectpath. Is the project path ok?"; }
 do "$projectpath/SqueezeMeta_conf.pl";
@@ -38,9 +39,12 @@ do "$projectpath/parameters.pl";
 
 our($samtools_soft, $concoct_dir,$databasepath,$contigsfna,$singletons,$contigcov,$tempdir,$interdir,$mappingfile,$datapath,$numthreads,$mappingfile,$methodsfile,$syslogfile);
 
+#-- Handle positional args
+GetOptions( 'threads=i' => \my $numthreads_override
+          );
+
 #-- Override numthreads if requested
 
-my $numthreads_override=$ARGV[1];
 if($numthreads_override) { $numthreads = $numthreads_override; }
 
 open(outsyslog,">>$syslogfile") || warn "Cannot open syslog file $syslogfile for writing the program log\n";
@@ -110,7 +114,7 @@ $command="python3 $concoct_dir/scripts/cut_up_fasta.py $contigsfna -c 10000 -o 0
 print outsyslog "\n  Cutting contigs in pieces!: $command\n";	
 system $command;	
 print "  Creating abundance table\n";	
-$command="PATH=$installpath/bin:\$PATH python3 $concoct_dir/scripts/concoct_coverage_table.py $bedfile $bamlist > $bindir/coverage_table.tsv";
+$command="python3 $concoct_dir/scripts/concoct_coverage_table.py $bedfile $bamlist > $bindir/coverage_table.tsv";
 print outsyslog "  Creating abundance table: $command\n";
 system($command);
 print "  Running concoct\n";

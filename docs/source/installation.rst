@@ -17,7 +17,7 @@ and then use conda to install SqueezeMeta
 
 .. code-block:: console
 
-   conda create -n SqueezeMeta -c conda-forge -c bioconda -c fpusan squeezemeta=1.7 --no-channel-priority --override-channels
+   conda create -n SqueezeMeta -c conda-forge -c bioconda -c fpusan squeezemeta=1.8 --no-channel-priority --override-channels
 
 If the environment does not solve and you get a message saying that
 ``__cuda`` is missing in your system, try adding ``CONDA_OVERRIDE_CUDA=12.4``
@@ -201,6 +201,8 @@ SqueezeMeta redistributes the following third-party software. Note that, for com
 - `CONCOCT <https://github.com/BinPro/CONCOCT>`_
 
     - Fix an error in transform.py with newer version of scikit-kearn
+    - Fix SintaxError in regular expression on newer python3 versions
+    - Fix pkg_resources.require being deprecated in newer python3 versions
 
 - `DAS Tool https://github.com/cmks/DAS_Tool>`_
 
