@@ -99,7 +99,7 @@ outputs:
         - kmer-db
         - metabat2
         - bowtie2
-        - diamond >=2.2.1
+        - diamond >=2.2.2
         - flye
         # CheckM2
         - prodigal=2.6.3

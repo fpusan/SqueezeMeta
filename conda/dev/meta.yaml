@@ -49,22 +49,22 @@ outputs:
         - python-igraph
       run:
         - python=={{ py_version }}
-        - setuptools==82.0.1
-        - cython==3.2.6
+        - setuptools==84.0.0
+        - cython==3.3.0
         - numpy==1.26.4
         - scipy==1.17.1
-        - pandas==3.0.3
-        - biopython==1.87
+        - pandas==3.0.5
+        - biopython==1.88
         - scikit-learn==1.6.1
         - nose==1.3.7
         - gsl==2.7
         - samtools==1.23
-        - blas==2.308
+        - blas==2.309
         - future==1.0.0
         - matplotlib==3.10.9
-        - dendropy==5.0.8
+        - dendropy==5.0.13
         - pysam==0.23.3
-        - biopython==1.87
+        - biopython==1.88
         - perl={{ pl_version }}
         - perl-tie-ixhash==1.23
         - perl-dbd-mysql==5.013
@@ -73,14 +73,14 @@ outputs:
         - perl-list-moreutils==0.430
         - perl-xml-libxml==2.0210
         - perl-xml-parser==2.44_01
-        - openjdk==23.0.2
+        - openjdk==25.0.1
         - ruby==3.4.7
         - r-base=={{ r_version }}
         - r-ggplot2==4.0.3
         - r-reshape2==1.4.5
         - r-doMC
-        - r-data.table==1.17.8
-        - r-zip==3.0.0
+        - r-data.table==1.18.4
+        - r-zip==3.0.2
         - r-docopt==0.7.2
         - bioconductor-pathview==1.46.0
         - r-magick==2.9.0
@@ -88,52 +88,52 @@ outputs:
         - tree==2.3.2
         - readline==8.3
         - krona==2.8.1
-        - fastp==1.3.5
+        - fastp==1.3.6
         - spades==4.3.0
         - rdp_classifier==2.14
         - mothur==1.25.0
         - kmer-db==2.3.1
         - metabat2==2.12.1
         - bowtie2==2.5.5
-        - diamond==2.2.2
+        - diamond==2.2.5
         - flye==2.9.6
         - prodigal==2.6.3
         - scikit-learn==1.6.1
         - tensorflow==2.17.0
-        - lightgbm==4.6.0
+        - lightgbm==4.7.0
         - requests==2.34.2
-        - packaging==26.2
+        - packaging==26.3
         - pplacer==1.1.alpha19
         - prodigal==2.6.3
         - pydantic==1.10.22
-        - libopenblas==0.3.33
+        - libopenblas==0.3.34
         - fasttree==2.2.0
         - hmmer==3.4
-        - tqdm==4.68.3
+        - tqdm==4.70.0
         - skani==0.3.2
         - graph-tool==2.98
         - minimap2==2.31
         - mm2plus==1.3
-        - mappy==2.30
+        - mappy==2.31
         - python-igraph==1.0.0
         - fastani==1.34
-        - nextflow==26.04.4
+        - nextflow==26.04.6
         - seqtk==1.5
         - bedtools==2.31.1
         - bc==1.07.1
         - vcflib==1.0.12
-        - picard==3.4.0
+        - picard==3.5.0
         - freebayes==1.3.9
-        - absl-py==2.4.0
+        - absl-py==2.5.0
         - adwaita-icon-theme==49.0
         - aom==3.9.1
-        - argcomplete==3.6.3
+        - argcomplete==3.7.2
         - arpack==3.9.1
         - astunparse==1.6.3
         - at-spi2-atk==2.38.0
         - at-spi2-core==2.40.3
         - atk-1.0==2.38.0
-        - backports.zstd==1.6.0
+        - backports.zstd==1.7.0
         - bioconductor-annotationdbi==1.68.0
         - bioconductor-biobase==2.66.0
         - bioconductor-biocgenerics==0.52.0
@@ -157,25 +157,16 @@ outputs:
         - brotli-bin==1.2.0
         - brotli-python==1.2.0
         - bwidget==1.10.1
-        - cached-property==1.5.2
-        - cached_property==1.5.2
+        - cached-property==2.0.1
+        - cached_property==2.0.1
         - cairo==1.18.4
         - cairomm==1.16.2
         - cairomm-1.16==1.16.2
         - cffi==2.0.0
-        - charset-normalizer==3.4.7
+        - charset-normalizer==3.5.1
         - contourpy==1.3.3
-        - coreutils==9.5
-        - cuda-crt-tools==12.9.86
-        - cuda-cudart==12.9.79
-        - cuda-cudart_linux-64==12.9.79
-        - cuda-cupti==12.9.79
-        - cuda-nvcc-tools==12.9.86
-        - cuda-nvrtc==12.9.86
-        - cuda-nvtx==12.9.79
-        - cuda-nvvm-tools==12.9.86
-        - cuda-version==12.9
-        - cudnn==9.10.2.21
+        - coreutils==9.11
+        - cuda-version==13.3
         - cycler==0.12.1
         - cyrus-sasl==2.1.28
         - dav1d==1.2.1
@@ -189,7 +180,7 @@ outputs:
         - font-ttf-inconsolata==3.000
         - font-ttf-source-code-pro==2.038
         - font-ttf-ubuntu==0.83
-        - fontconfig==2.18.1
+        - fontconfig==2.18.3
         - fonts-conda-ecosystem==1
         - fonts-conda-forge==1
         - fonttools==4.63.0
@@ -212,18 +203,18 @@ outputs:
         - gtk3==3.24.43
         - gts==0.7.6
         - gxx_impl_linux-64==13.4.0
-        - h2==4.3.0
+        - h2==4.4.1
         - h5py==3.16.0
-        - harfbuzz==11.5.1
+        - harfbuzz==12.1.0
         - hdf5==1.14.6
         - hicolor-icon-theme==0.17
         - hpack==4.2.0
         - htslib==1.23
         - hyperframe==6.1.0
-        - idna==3.18
+        - idna==3.19
         - imagemagick==7.1.2_8
         - importlib-metadata==9.0.0
-        - isa-l==2.31.1
+        - isa-l==2.32.1
         - jbig==2.1
         - joblib==1.5.3
         - jq==1.8.2
@@ -235,7 +226,7 @@ outputs:
         - lcms2==2.19.1
         - libabseil==20240722.0
         - libaec==1.1.5
-        - libarchive==3.8.8
+        - libarchive==3.8.9
         - libavif16==1.4.2
         - libblas==3.11.0
         - libboost==1.86.0
@@ -247,16 +238,9 @@ outputs:
         - libclang-cpp21.1==21.1.8
         - libclang-cpp22.1==22.1.8
         - libclang13==22.1.8
-        - libcublas==12.9.2.10
-        - libcudnn==9.10.2.21
-        - libcudnn-dev==9.10.2.21
-        - libcufft==11.4.1.4
         - libcups==2.3.3
-        - libcurand==10.3.10.19
-        - libcusolver==11.7.5.82
-        - libcusparse==12.5.10.65
         - libde265==1.0.15
-        - libdrm==2.4.127
+        - libdrm==2.4.129
         - libedit==3.1.20250104
         - libegl==1.7.0
         - libegl-devel==1.7.0
@@ -264,14 +248,14 @@ outputs:
         - libexpat==2.8.1
         - libfreetype==2.14.3
         - libfreetype6==2.14.3
-        - libgcc==15.2.0
+        - libgcc==16.2.0
         - libgcc-devel_linux-64==13.4.0
-        - libgcc-ng==15.2.0
+        - libgcc-ng==16.2.0
         - libgd==2.3.3
         - libgdal-core==3.12.0
-        - libgfortran==15.2.0
-        - libgfortran-ng==15.2.0
-        - libgfortran5==15.2.0
+        - libgfortran==16.2.0
+        - libgfortran-ng==16.2.0
+        - libgfortran5==16.2.0
         - libgirepository==1.84.0
         - libgl==1.7.0
         - libgl-devel==1.7.0
@@ -279,19 +263,19 @@ outputs:
         - libglvnd==1.7.0
         - libglx==1.7.0
         - libglx-devel==1.7.0
-        - libgomp==15.2.0
+        - libgomp==16.2.0
         - libgrpc==1.65.5
         - libheif==1.19.7
         - libhwloc==2.13.0
         - libhwy==1.3.0
         - libiconv==1.18
         - libidn2==2.3.8
-        - libjpeg-turbo==3.1.4.1
+        - libjpeg-turbo==3.2.0
         - libjxl==0.11.2
         - libkml==1.3.0
         - liblapack==3.11.0
         - liblapacke==3.11.0
-        - liblightgbm==4.6.0
+        - liblightgbm==4.7.0
         - libllvm21==21.1.8
         - libllvm22==22.1.8
         - liblzma==5.8.3
@@ -299,7 +283,6 @@ outputs:
         - libnghttp2==1.68.1
         - libnsl==2.0.1
         - libntlm==1.8
-        - libnvjitlink==12.9.86
         - libopengl==1.7.0
         - libpciaccess==0.19
         - libpng==1.6.58
@@ -309,35 +292,35 @@ outputs:
         - librttopo==1.1.0
         - libsanitizer==13.4.0
         - libspatialite==5.1.0
-        - libsqlite==3.53.2
+        - libsqlite==3.53.4
         - libssh2==1.11.1
-        - libstdcxx==15.2.0
+        - libstdcxx==16.2.0
         - libstdcxx-devel_linux-64==13.4.0
-        - libstdcxx-ng==15.2.0
-        - libtiff==4.7.1
+        - libstdcxx-ng==16.2.0
+        - libtiff==4.7.2
         - libudunits2==2.2.28
         - libunistring==0.9.10
-        - libvulkan-loader==1.4.341.0
+        - libvulkan-loader==1.4.357.0
         - libwebp==1.6.0
         - libwebp-base==1.6.0
-        - libxcrypt==4.4.36
+        - libxcrypt==4.4.38
         - libxml2-16==2.14.6
         - libxml2-devel==2.14.6
         - libxslt==1.1.43
         - libzlib==1.3.2
-        - llvm-openmp==22.1.8
+        - llvm-openmp==23.1.0
         - lz4-c==1.10.0
         - lzo==2.10
         - make==4.4.1
-        - markdown==3.10.2
+        - markdown==3.10.3
         - markdown-it-py==4.2.0
         - markupsafe==3.0.3
         - matplotlib-base==3.10.9
         - mdurl==0.1.2
-        - minizip==4.2.1
-        - mkl==2026.0.0
-        - mkl-devel==2026.0.0
-        - mkl-include==2026.0.0
+        - minizip==4.2.2
+        - mkl==2026.1.0
+        - mkl-devel==2026.1.0
+        - mkl-include==2026.1.0
         - ml_dtypes==0.4.0
         - mpi==1.0
         - munkres==1.1.4
@@ -346,17 +329,17 @@ outputs:
         - mysql-common==8.4.2
         - mysql-libs==8.4.2
         - namex==0.1.0
+        - narwhals==2.25.0
         - nccl==2.30.7.1
         - ncurses==6.6
-        - onemkl-license==2026.0.0
         - oniguruma==6.9.10
         - openjpeg==2.5.4
         - openldap==2.6.10
         - openmpi==4.1.6
         - opt_einsum==3.4.0
-        - optree==0.19.1
+        - optree==0.20.0
         - pango==1.56.4
-        - parallel==20260422
+        - parallel==20260722
         - pcre2==10.46
         - perl-alien-build==2.84
         - perl-alien-build-plugin-download-gitlab==0.01
@@ -371,7 +354,7 @@ outputs:
         - perl-compress-raw-bzip2==2.214
         - perl-compress-raw-zlib==2.214
         - perl-constant==1.33
-        - perl-dbi==1.649
+        - perl-dbi==1.651
         - perl-devel-checklib==1.16
         - perl-digest-hmac==1.05
         - perl-digest-md5==2.59
@@ -389,10 +372,10 @@ outputs:
         - perl-file-which==1.24
         - perl-html-parser==3.81
         - perl-html-tagset==3.24
-        - perl-http-cookies==6.11
+        - perl-http-cookies==6.12
         - perl-http-daemon==6.17
-        - perl-http-date==6.06
-        - perl-http-message==7.02
+        - perl-http-date==6.08
+        - perl-http-message==7.04
         - perl-http-negotiate==6.01
         - perl-importer==0.026
         - perl-io-html==1.004
@@ -420,34 +403,35 @@ outputs:
         - perl-time-local==1.35
         - perl-timedate==2.35
         - perl-try-tiny==0.32
-        - perl-uri==5.35
+        - perl-uri==5.36
         - perl-url-encode==0.03
         - perl-www-robotrules==6.03
         - perl-xml-namespacesupport==1.12
         - perl-xml-sax==1.02
         - perl-xml-sax-base==1.09
-        - pillow==12.2.0
-        - pip==26.1.2
+        - pigz==2.8
+        - pillow==12.3.0
+        - pip==26.2.1
         - pixman==0.46.4
         - pkg-config==0.29.2
         - proj==9.7.1
         - protobuf==5.27.5
         - pthread-stubs==0.4
-        - pycairo==1.29.0
+        - pycairo==1.29.1
         - pycparser==3.0
-        - pygments==2.20.0
+        - pygments==2.21.0
         - pygobject==3.54.5
         - pyparsing==3.3.2
-        - pyside6==6.9.2
+        - pyside6==6.9.3
         - pysocks==1.7.1
         - python-dateutil==2.9.0.post0
-        - python-flatbuffers==25.9.23
+        - python-flatbuffers==25.12.19
         - pyyaml==6.0.3
         - qhull==2020.2
-        - qt6-main==6.9.2
+        - qt6-main==6.9.3
         - r-askpass==1.2.1
         - r-bit==4.6.0
-        - r-bit64==4.8.2
+        - r-bit64==4.8.4
         - r-bitops==1.0_9
         - r-blob==1.3.0
         - r-cachem==1.1.0
@@ -455,7 +439,7 @@ outputs:
         - r-classint==0.4_11
         - r-cli==3.6.6
         - r-codetools==0.2_20
-        - r-colorspace==2.1_2
+        - r-colorspace==2.1_3
         - r-cpp11==0.5.5
         - r-crayon==1.5.3
         - r-curl==7.0.0
@@ -476,7 +460,7 @@ outputs:
         - r-labeling==0.4.3
         - r-lifecycle==1.0.5
         - r-magrittr==2.0.5
-        - r-mass==7.3_65
+        - r-mass==7.3_66
         - r-memoise==2.0.1
         - r-mime==0.13
         - r-munsell==0.5.1
@@ -488,9 +472,9 @@ outputs:
         - r-proxy==0.4_29
         - r-r6==2.6.1
         - r-rcolorbrewer==1.1_3
-        - r-rcpp==1.1.1_1.1
+        - r-rcpp==1.1.2
         - r-rcurl==1.98_1.17
-        - r-rlang==1.2.0
+        - r-rlang==1.3.0
         - r-rsqlite==3.53.1
         - r-s2==1.1.7
         - r-s7==0.2.2
@@ -513,7 +497,7 @@ outputs:
         - six==1.17.0
         - snappy==1.2.2
         - sparsehash==2.0.4
-        - sqlite==3.53.2
+        - sqlite==3.53.4
         - svt-av1==4.0.1
         - tabixpp==1.1.2
         - tbb==2023.0.0
@@ -526,20 +510,19 @@ outputs:
         - threadpoolctl==3.6.0
         - tk==8.6.13
         - tktable==2.10
-        - toml==0.10.2
-        - tomlkit==0.15.0
-        - tornado==6.5.7
-        - typing-extensions==4.15.0
-        - typing_extensions==4.15.0
-        - tzdata==2025c
+        - tomlkit==0.15.1
+        - tornado==6.5.8
+        - typing-extensions==4.16.0
+        - typing_extensions==4.16.0
+        - tzdata==2026c
         - unicodedata2==17.0.1
         - uriparser==0.9.8
         - urllib3==2.7.0
         - wayland==1.24.0
         - werkzeug==3.1.8
         - wget==1.21.4
-        - wheel==0.47.0
-        - wrapt==2.2.2
+        - wheel==0.48.0
+        - wrapt==2.3.0
         - x265==3.5
         - xcb-util==0.4.1
         - xcb-util-cursor==0.1.6
@@ -570,7 +553,7 @@ outputs:
         - xorg-xextproto==7.3.0
         - xorg-xorgproto==2025.1
         - yaml==0.2.5
-        - yq==3.4.3
+        - yq==4.1.2
         - zipp==4.1.0
         - zlib==1.3.2
         - zlib-ng==2.3.3
